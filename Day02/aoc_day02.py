@@ -42,7 +42,6 @@ def generic_dict_parser(dct : dict, input_str : str):
 
 
 def score_input(match : list, opp_choice : dict, your_choice : dict, shape_points : dict, match_points : dict):
-    match_tally = 0
     opponent_raw_value = str(match[0])
     your_raw_value = str(match[1])
     # parse opponent dict
@@ -54,7 +53,7 @@ def score_input(match : list, opp_choice : dict, your_choice : dict, shape_point
     # determine match outcome
     match_result = win_lose_draw(opp = opp_call, you = your_call)
     # get points for match
-    match_points = generic_dict_parser(dct = match_points, input_str = match_result)
+    match_tally = generic_dict_parser(dct = match_points, input_str = match_result)
     # tally score to put into the list output
     final_score = call_pts + match_tally
     return final_score
