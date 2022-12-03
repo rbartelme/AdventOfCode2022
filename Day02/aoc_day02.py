@@ -10,6 +10,7 @@ opponent_choices = {"A": "Rock", "B": "Paper", "C": "Scissors"}
 your_choices = {"X": "Rock", "Y": "Paper", "Z": "Scissors"}
 shape_score = {"Rock": 1, "Paper": 2, "Scissors": 3}
 match_score = {"Loss": 0, "Draw": 3, "Win": 6}
+rnd2_choice = {"X": "Loss", "Y": "Draw", "Z" : "Win"}
 
 
 # Match outcome algorithm
@@ -122,20 +123,19 @@ def parse_elf_guide(elf_text : str):
 ELF_GUIDE = r"day2_input.txt"
 foo_lst = parse_elf_guide(elf_text = ELF_GUIDE)
 
-print(len(foo_lst))
-
-#print(type(foo_lst[0]))
-#print(type(foo_lst[0][0]))
-#tmp_dct = {"a": 1, "b": 2, "c": 3}
-#tmp_str1 = "a"
-#tmp_str2 = "z"
-
-#out_val = generic_dict_parser(dct = tmp_dct, input_str = tmp_str1)
-#print(out_val)
-#print(foo_lst[0][0])
-#print(foo_lst[0][1])
+# part 1
 lst_match_scores = [score_input(match = mtch, opp_choice = opponent_choices, \
         your_choice = your_choices, shape_points = shape_score, match_points = match_score) \
         for mtch in foo_lst]
 elf_beta = sum(lst_match_scores)
-print("Your total score would be: ", elf_beta)
+print("Part 1: Your total score would be: ", elf_beta)
+
+# part 2
+
+# parse fileline list to specify the outcome via rnd2_choice
+foo_lst
+# adjust win lose draw to find '
+# the shape played from the rnd2_choice
+
+
+
