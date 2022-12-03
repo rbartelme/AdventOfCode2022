@@ -66,7 +66,8 @@ def find_shape_by_outcome(opp : str, outcome : str):
     you : str
         Your choice of shape in the rock paper scissors match.
     """
-
+    #initialize you
+    you = ""
     if outcome == "Draw":
         you = opp
     elif outcome == "Win" and opp == "Scissors":
