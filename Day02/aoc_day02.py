@@ -59,7 +59,7 @@ def find_shape_by_outcome(opp : str, outcome : str):
     opp : str
         The opponent's choice of rock/paper/scissors as a string.
     outcome : str
-        Whether you won or lost the 
+        Whether you won or lost the
 
     Returns
     -------
@@ -69,7 +69,7 @@ def find_shape_by_outcome(opp : str, outcome : str):
 
     if outcome == "Draw":
         you = opp
-    eilf outcome == "Win" and opp == "Scissors":
+    elif outcome == "Win" and opp == "Scissors":
         you = "Rock"
     elif outcome == "Win" and opp == "Paper":
         you = "Scissors"
@@ -157,7 +157,7 @@ def outcome_to_score(match : list, opp_choice : dict, match_outcome : dict, shap
     # parse match result
     match_out = generic_dict_parser(dct = match_outcome, input_str = raw_match_result)
     # find your shape
-    shape_called = find_shape_by_outcome(opp = opp_Call, outcome = match_out)  
+    shape_called = find_shape_by_outcome(opp = opp_Call, outcome = match_out)
     # get points for choice
     call_pts = generic_dict_parser(dct = shape_points, input_str = shape_called)
     # get points for match
@@ -202,9 +202,12 @@ print("Part 1: Your total score would be: ", elf_beta)
 # part 2
 
 # parse fileline list to specify the score for each match via rnd2_choice
-pt2_adjusted_scores = [find_shape_by_outcome(match = mtch2, opp_choice = opponent_choices, \
-        match_outcome = rnd2_choice, shape_points = shape_score, match_points = match score) \
-        for mtch2 in foo_lst]
+pt2_adjusted_scores = [find_shape_by_outcome(match = mtch2, \
+                                             opp_choice = opponent_choices, \
+                                             match_outcome = rnd2_choice, \
+                                             shape_points = shape_score, \
+                                             match_points = match_score) \
+                       for mtch2 in foo_lst]
 # sum the list
 elf_rnd2 = sum(pt2_adjusted_scores)
 print("Part 2: Your total revised score would be: ", elf_rnd2)
