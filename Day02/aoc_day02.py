@@ -42,7 +42,7 @@ def generic_dict_parser(dct : dict, input_str : str):
 
 
 def score_input(match : list, opp_choice : dict, your_choice : dict, shape_points : dict, match_points : dict):
-    match_score = 0
+    match_tally = 0
     opponent_raw_value = str(match[0])
     your_raw_value = str(match[1])
     # parse opponent dict
@@ -56,7 +56,7 @@ def score_input(match : list, opp_choice : dict, your_choice : dict, shape_point
     # get points for match
     match_points = generic_dict_parser(dct = match_points, input_str = match_result)
     # tally score to put into the list output
-    final_score = call_pts + match_points
+    final_score = call_pts + match_tally
     return final_score
 
 
@@ -72,6 +72,8 @@ def parse_elf_guide(foo : str):
 elf_guide = r"day2_input.txt"
 foo_lst = parse_elf_guide(elf_guide)
 
+print(len(foo_lst))
+
 #print(type(foo_lst[0]))
 #print(type(foo_lst[0][0]))
 #tmp_dct = {"a": 1, "b": 2, "c": 3}
@@ -83,7 +85,7 @@ foo_lst = parse_elf_guide(elf_guide)
 #print(foo_lst[0][0])
 #print(foo_lst[0][1])
 lst_match_scores = [score_input(match = mtch, opp_choice = opponent_choices, your_choice = your_choices, shape_points = shape_score, match_points = match_score) for mtch in foo_lst]
-elf_beta = sum(lst_match_scorei)
+elf_beta = sum(lst_match_scores)
 print("Your total score would be: ", elf_beta)
 
 
