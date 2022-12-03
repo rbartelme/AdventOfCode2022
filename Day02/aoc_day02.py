@@ -10,7 +10,7 @@ opponent_choices = {"A": "Rock", "B": "Paper", "C": "Scissors"}
 your_choices = {"X": "Rock", "Y": "Paper", "Z": "Scissors"}
 shape_score = {"Rock": 1, "Paper": 2, "Scissors": 3}
 match_score = {"Loss": 0, "Draw": 3, "Win": 6}
-rnd2_choice = {"X": "Loss", "Y": "Draw", "Z" : "Win"}
+rnd2_choice = {"X": "Loss", "Y": "Draw", "Z": "Win"}
 
 
 # Match outcome algorithm
@@ -66,7 +66,7 @@ def find_shape_by_outcome(opp : str, outcome : str):
     you : str
         Your choice of shape in the rock paper scissors match.
     """
-    #initialize you
+    # initialize you
     you = ""
     if outcome == "Draw":
         you = opp
@@ -76,11 +76,11 @@ def find_shape_by_outcome(opp : str, outcome : str):
         you = "Scissors"
     elif outcome == "Win" and opp == "Rock":
         you = "Paper"
-    elif outcome == "Lose" and opp == "Rock":
+    elif outcome == "Loss" and opp == "Rock":
         you = "Scissors"
-    elif outcome == "Lose" and opp == "Paper":
+    elif outcome == "Loss" and opp == "Paper":
         you = "Rock"
-    elif outcome == "Lose" and opp == "Scissors":
+    elif outcome == "Loss" and opp == "Scissors":
         you = "Paper"
     else:
         print("Well that ain't right, this just terminates the logic.")
@@ -88,10 +88,30 @@ def find_shape_by_outcome(opp : str, outcome : str):
 
 # generic parser for the dictionaries
 def generic_dict_parser(dct : dict, input_str : str):
+    """
+    Parameters
+    ----------
+
+    dct : dict
+        Dictionary to parse.
+    input_str : str
+        String to parse against Dictionary Keys
+
+    Returns
+    -------
+    match_val : str or int
+         Returns a string or an int depending on the type.
+    """
     # initialize match_val
-    match_val = None
     if input_str in list(dct):
-        match_val = dct[input_str]
+        if type(dct[input_str]) == str:
+            match_val = ""
+            match_val = dct[input_str]
+        elif type(dct[input_str]) == int:
+            match_val = 0
+            match_val = dct[input_str]
+        else:
+            print("Some weird type error occured")
     else:
         print("String {input_str} not found in keys of {dct}")
     return match_val
@@ -157,10 +177,16 @@ def outcome_to_score(match : list, opp_choice : dict, match_outcome : dict, shap
     raw_match_result = str(match[1])
     # parse opponent dict
     opp_call = generic_dict_parser(dct = opp_choice, input_str = opponent_raw_value)
+    # the opponent chose
+    # print("The opponent chose the shape:", opp_call)
     # parse match result
     match_out = generic_dict_parser(dct = match_outcome, input_str = raw_match_result)
+    # print match for debug
+    # print("The result of the match is:", match_out)
     # find your shape
     shape_called = find_shape_by_outcome(opp = opp_call, outcome = match_out)
+    # print the called shape for debug
+    # print("The shape provided by you is: ", shape_called)
     # get points for choice
     call_pts = generic_dict_parser(dct = shape_points, input_str = shape_called)
     # get points for match
