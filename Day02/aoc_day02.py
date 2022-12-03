@@ -51,6 +51,40 @@ def win_lose_draw(opp : str, you : str):
 
     return outcome
 
+
+def find_shape_by_outcome(opp : str, outcome : str):
+    """
+    Parameters
+    ----------
+    opp : str
+        The opponent's choice of rock/paper/scissors as a string.
+    outcome : str
+        Whether you won or lost the 
+
+    Returns
+    -------
+    you : str
+        Your choice of shape in the rock paper scissors match.
+    """
+
+    if outcome == "Draw":
+        you = opp
+    eilf outcome == "Win" and opp == "Scissors":
+        you = "Rock"
+    elif outcome == "Win" and opp == "Paper":
+        you = "Scissors"
+    elif outcome == "Win" and opp == "Rock":
+        you = "Paper"
+    elif outcome == "Lose" and opp == "Rock":
+        you = "Scissors"
+    elif outcome == "Lose" and opp == "Paper":
+        you = "Rock"
+    elif outcome == "Lose" and opp == "Scissors":
+        you = "Paper"
+    else:
+        print("Well that ain't right, this just terminates the logic.")
+    return you
+
 # generic parser for the dictionaries
 def generic_dict_parser(dct : dict, input_str : str):
     if input_str in list(dct):
