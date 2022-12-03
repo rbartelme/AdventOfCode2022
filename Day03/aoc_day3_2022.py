@@ -34,12 +34,11 @@ def splt_lst_to_set(lst_str_in : str):
     u_of_s : str
         The union of the two split lists as sets.
     """
-    lst_in = []
-    lst_in = [z for z in lst_str_in]
+    lst_in = list(lst_str_in)
     half = len(lst_in)//2
-    lsta = lst_in[half:]
-    lstb = lst_in[:half]
-    bw_union = set(lsta) & set(lstb)
+    lsta = sorted(lst_in[half:])
+    lstb = sorted(lst_in[:half])
+    bw_union = set(j for j in lsta) & set(m for m in lstb)
     return bw_union
 
 smol_letters = list(map(chr, range(97, 123)))
