@@ -89,7 +89,7 @@ def find_shape_by_outcome(opp : str, outcome : str):
 # generic parser for the dictionaries
 def generic_dict_parser(dct : dict, input_str : str):
     # initialize match_val
-    match_val = ""
+    match_val = None
     if input_str in list(dct):
         match_val = dct[input_str]
     else:
