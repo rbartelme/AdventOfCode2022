@@ -1,0 +1,20 @@
+************* Module aoc_day02
+aoc_day02.py:97:0: C0301: Line too long (111/100) (line-too-long)
+aoc_day02.py:110:0: C0301: Line too long (106/100) (line-too-long)
+aoc_day02.py:134:0: C0301: Line too long (118/100) (line-too-long)
+aoc_day02.py:147:0: C0301: Line too long (106/100) (line-too-long)
+aoc_day02.py:215:0: C0305: Trailing newlines (trailing-newlines)
+aoc_day02.py:89:0: C0116: Missing function or method docstring (missing-function-docstring)
+aoc_day02.py:160:47: E0602: Undefined variable 'opp_Call' (undefined-variable)
+aoc_day02.py:156:4: W0612: Unused variable 'opp_call' (unused-variable)
+aoc_day02.py:205:23: E1123: Unexpected keyword argument 'match' in function call (unexpected-keyword-arg)
+aoc_day02.py:205:23: E1123: Unexpected keyword argument 'opp_choice' in function call (unexpected-keyword-arg)
+aoc_day02.py:205:23: E1123: Unexpected keyword argument 'match_outcome' in function call (unexpected-keyword-arg)
+aoc_day02.py:205:23: E1123: Unexpected keyword argument 'shape_points' in function call (unexpected-keyword-arg)
+aoc_day02.py:205:23: E1123: Unexpected keyword argument 'match_points' in function call (unexpected-keyword-arg)
+aoc_day02.py:205:23: E1120: No value for argument 'opp' in function call (no-value-for-parameter)
+aoc_day02.py:205:23: E1120: No value for argument 'outcome' in function call (no-value-for-parameter)
+
+------------------------------------------------------------------
+Your code has been rated at 3.90/10 (previous run: 3.90/10, +0.00)
+
