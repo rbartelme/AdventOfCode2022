@@ -202,7 +202,7 @@ print("Part 1: Your total score would be: ", elf_beta)
 # part 2
 
 # parse fileline list to specify the score for each match via rnd2_choice
-pt2_adjusted_scores = [find_shape_by_outcome(match = mtch2, \
+pt2_adjusted_scores = [outcome_to_score(match = mtch2, \
                                              opp_choice = opponent_choices, \
                                              match_outcome = rnd2_choice, \
                                              shape_points = shape_score, \
