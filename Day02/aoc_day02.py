@@ -157,7 +157,7 @@ def outcome_to_score(match : list, opp_choice : dict, match_outcome : dict, shap
     # parse match result
     match_out = generic_dict_parser(dct = match_outcome, input_str = raw_match_result)
     # find your shape
-    shape_called = find_shape_by_outcome(opp = opp_Call, outcome = match_out)
+    shape_called = find_shape_by_outcome(opp = opp_call, outcome = match_out)
     # get points for choice
     call_pts = generic_dict_parser(dct = shape_points, input_str = shape_called)
     # get points for match
