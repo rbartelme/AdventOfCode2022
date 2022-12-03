@@ -34,7 +34,8 @@ def splt_lst_to_set(lst_str_in : str):
     u_of_s : str
         The union of the two split lists as sets.
     """
-    lst_in = list(lst_str_in)
+    lst_in = []
+    lst_in = [z for z in lst_str_in]
     half = len(lst_in)//2
     lsta = lst_in[half:]
     lstb = lst_in[:half]
