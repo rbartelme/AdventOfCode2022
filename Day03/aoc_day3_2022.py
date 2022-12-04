@@ -90,3 +90,12 @@ un_letters  = [splt_lst_to_set(ii) for ii in ln_lst]
 weight_score = [generic_dict_parser(dct = letter_pts_map, input_str = kk) for kk in un_letters]
 total_weight = sum(weight_score)
 print("Part 1 answer - The total weight priority queue is:", total_weight)
+
+
+"""
+Part 2:
+    Find the union of characters every three lines and score that the same way.
+    Need to group every three lines together.
+"""
+print("The length of the list is:", len(ln_lst))
+print("Modulo 3 of the list length is:", len(ln_lst) // 3)
