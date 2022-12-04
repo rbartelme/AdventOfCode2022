@@ -70,12 +70,10 @@ def is_lst_sbset(m: list, n: list, part_2: bool):
         else:
             z = 0
     if part_2 == True:
-        if len(list(m_set| n_set)) != 0:
+        if bool(set(m_set) & set(n_set)) == True:
             z = 1
-        elif len(list(m_set| n_set)) == 0:
-            z = 0
         else:
-            print("Something went wrong with caclulating the union of two sets and finding the length of that result stored as a list.")
+            z = 0
     return z
 
 # Define function to take a list of len 4 and create ranges from the 4 ints
