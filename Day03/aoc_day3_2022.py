@@ -99,3 +99,11 @@ Part 2:
 """
 print("The length of the list is:", len(ln_lst))
 print("Modulo 3 of the list length is:", len(ln_lst) // 3)
+
+# try grouping the list with a function
+def grouplen(sequence, chunk_size):
+    return list(zip(*[iter(sequence)] * chunk_size))
+
+test_lst = grouplen(sequence = ln_lst, chunk_size = 3)
+print(len(test_lst))
+print(len(test_lst[0])
