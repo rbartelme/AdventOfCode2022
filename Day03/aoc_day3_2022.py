@@ -131,3 +131,7 @@ def pt2_union(in_lst: list):
 
 pt2_char_lst = [pt2_union(pp) for pp in test_lst]
 print(pt2_char_lst[0])
+
+pt2_elf_Score = [generic_dict_parser(dct = letter_pts_map, input_str = kk) for kk in pt2_char_lst]
+pt2_final_score = sum(pt2_elf_Score)
+print("Part 2 answer - The 3 elf weight priority queue is:", pt2_final_score)
