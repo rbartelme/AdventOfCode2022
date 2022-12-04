@@ -106,4 +106,18 @@ def grouplen(sequence, chunk_size):
 
 test_lst = grouplen(sequence = ln_lst, chunk_size = 3)
 print(len(test_lst))
-print(len(test_lst[0])
+print(len(test_lst[0]))
+
+def pt2_union(in_lst: list):
+    """
+    Parameters
+    ----------
+    in_lst: list
+        The input list of strings to convert to sets.
+
+    Returns
+    -------
+    out_char : str
+        The output character from the union of the three sets.
+    """
+    return None
