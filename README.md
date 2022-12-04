@@ -1,2 +1,2 @@
 # AdventOfCode2022
-Advent of Code 2022: snek edition
+Advent of Code 2022: snek edition 🐍
