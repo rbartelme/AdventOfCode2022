@@ -124,5 +124,5 @@ elf_yn2 = [lst_to_range(x = elf, prt_2 = True) for elf in test_elf]
 pt2_finelf = sum(elf_yn2)
 
 # print part2 answer
-print("Part 2; The total number of set comparisons containing unions is: ", pt2_finelf)
+print("Part 2; The total number of set comparisons containing intersections is: ", pt2_finelf)
 
