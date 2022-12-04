@@ -120,10 +120,10 @@ def pt2_union(in_lst: list):
     out_char : str
         The output character from the union of the three sets.
     """
-    assert len(in_list) == 3
-    a_str = list(str(in_list[0]))
-    b_str = list(str(in_list[1]))
-    c_str = list(str(in_list[2]))
+    assert len(in_lst) == 3
+    a_str = list(str(in_lst[0]).replace("'", "").replace("[","").replace("]", "")
+    b_str = list(str(in_lst[1]))
+    c_str = list(str(in_lst[2]))
     tri_union = set(j for j in a_str) & set(m for m in b_str) & set(k for k in c_str)
     templs = list(tri_union)
     out_char = str(templs[0])
