@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # read in file and strip chr convert to list of ints
-ELF_WORK = r"day04_input.txt
+ELF_WORK = r"day4_input.txt"
 
 # main file parser
 def parse_elf_guide(elf_text : str):
@@ -22,3 +22,7 @@ def parse_elf_guide(elf_text : str):
 
 # test parser and char list output
 test_elf = parse_elf_guide(elf_text = ELF_WORK)
+
+# print test out
+print(type(test_elf[0]))
+print(test_elf[0])
