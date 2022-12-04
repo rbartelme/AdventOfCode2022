@@ -95,7 +95,7 @@ print("Part 1 answer - The total weight priority queue is:", total_weight)
 """
 Part 2:
     Find the union of characters every three lines and score that the same way.
-    Need to group every three lines together.
+    Need to group every three lines together.👍👍👍
 """
 print("The length of the list is:", len(ln_lst))
 print("Modulo 3 of the list length is:", len(ln_lst) // 3)
@@ -120,4 +120,14 @@ def pt2_union(in_lst: list):
     out_char : str
         The output character from the union of the three sets.
     """
-    return None
+    assert len(in_list) == 3
+    a_str = list(str(in_list[0]))
+    b_str = list(str(in_list[1]))
+    c_str = list(str(in_list[2]))
+    tri_union = set(j for j in a_str) & set(m for m in b_str) & set(k for k in c_str)
+    templs = list(tri_union)
+    out_char = str(templs[0])
+    return out_char
+
+pt2_char_lst = [pt2_union(pp) for pp in test_lst]
+print(pt2_char_lst[0])
